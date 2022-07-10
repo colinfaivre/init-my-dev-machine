@@ -12,3 +12,4 @@ RUN apt-get update && \
 
 WORKDIR /home
 COPY . .
+CMD ["sh", "-c", "ansible-playbook ansible.yml"]
