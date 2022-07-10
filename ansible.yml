@@ -1,7 +1,8 @@
 - hosts: localhost
   tasks:
+  - include_tasks: tasks/git-setup.yml
   - include_tasks: tasks/zsh.yml
-  - include_tasks: tasks/node.yml
+  - include_tasks: tasks/node-setup.yml
   - include_tasks: tasks/npm-packages.yml
   - include_tasks: tasks/terminal-utils.yml
       

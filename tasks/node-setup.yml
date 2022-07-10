@@ -1,0 +1,12 @@
+- name: Install node and npm
+  apt:
+    name: ['nodejs', 'npm']
+  become: true
+
+- name: Install n
+  npm: 
+    name: n
+    global: true
+  
+- name: Use node version 14
+  shell: n 14
