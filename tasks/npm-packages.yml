@@ -1,0 +1,10 @@
+  - name: Install yarn
+    become: true
+    npm:
+      name: yarn
+      global: true
+  - name: Install vue 
+    become: true
+    npm:
+      name: vue
+      global: true

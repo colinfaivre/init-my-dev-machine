@@ -1,0 +1,20 @@
+  - name: Install curl 
+    apt: name=curl
+    become: true
+
+  - name: Install docker prerequesite packages
+    apt:
+      name: ["apt-transport-https", "ca-certificates", "software-properties-common"]  
+    become: true
+
+  - name: Add the GPG key for the official Docker repository
+    shell: curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
+    become: true
+
+  - name: Add the Docker repository to APT sources
+    shell: add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
+    become: true
+
+  - name: Install Docker
+    apt: name=docker-ce
+    become: true

@@ -1,0 +1,11 @@
+  - name: Install zsh  
+    apt: name=zsh
+    become: true
+    
+  - name: Change shell
+    shell: chsh -s `which zsh`
+    become: true
+    
+  - name: Install Oh my zsh
+    shell: sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    become: true
