@@ -1,10 +1,31 @@
-  - name: Install yarn
-    become: true
-    npm:
-      name: yarn
-      global: true
-  - name: Install vue 
-    become: true
-    npm:
-      name: vue
-      global: true
+- name: Install yarn
+  become: true
+  npm:
+    name: yarn
+    global: true
+
+- name: Install vue 
+  become: true
+  npm:
+    name: "@vue/cli"
+    global: true
+
+- name: Install eslint
+  npm:
+    name: eslint
+    global: yes
+
+- name: Install Typescript server
+  npm:
+    name: typescript-language-server
+    global: yes
+
+- name: Install Typescript
+  npm:
+    name: typescript
+    global: yes
+
+- name: Install TS-Node
+  npm:
+    name: ts-node
+    global: yes
