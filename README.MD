@@ -9,4 +9,5 @@ Use the Dockerfile to work on the script in a clean environment:
 ```bash
 docker build -t new-computer .
 docker run --rm -it new-computer
+ansible-playbook ansible.yml
 ```
