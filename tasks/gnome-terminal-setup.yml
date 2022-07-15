@@ -1,0 +1,9 @@
+- name: Clone Gogh into your home directory
+  become: yes
+  ansible.builtin.git:
+    repo: 'https://github.com/Gogh-Co/Gogh.git'
+    dest: "/home/colinfaivre/gogh"
+
+- name: Install gruvbox dark gnome-terminal theme
+  become: yes
+  shell: 'cd gogh/themes && export TERMINAL=gnome-terminal && ./gruvbox-dark.sh'

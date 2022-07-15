@@ -1,11 +1,12 @@
   - name: Install zsh  
+    become: yes
     apt: name=zsh
-    become: true
+    tags: ['install']
     
   - name: Change shell
     shell: chsh -s `which zsh`
-    become: true
+    become: yes
     
   - name: Install Oh my zsh
-    shell: sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-    become: true
+    shell: curl -L https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+    become_user: colinfaivre
