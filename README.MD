@@ -16,3 +16,5 @@ docker run --rm -it new-computer
 - install tmux
 - dotfiles : try with zsh
 - use tags
+
+usefull link to open apps on dedicated workspaces : https://medium.com/@mukherjeekalpan/auto-start-apps-and-fix-them-to-workspaces-on-startup-ubuntu-a1124f1af7f3
